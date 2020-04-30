@@ -1,0 +1,78 @@
+
+
+
+
+
+
+.tokenizer {
+	
+		input {
+			width :200px;
+			display:inline-block;	
+		}
+
+		button {
+		    height: 33px;
+			width: 50px;
+
+			i {	display:none; }
+			
+			
+			.invalid:active {
+				background: red!important;
+				
+				span { display:none; }
+				
+				i { display:block; }		
+			}
+		}
+		
+		.token{
+			   box-shadow: 2px 2px 4px #717171;
+
+			color: #444444;
+			display: inline-block;
+			background: #e6e6e6;
+			border: solid #bdbdbd 1px;
+			border-radius: 8px;
+			margin: 3px 2px;
+			padding: 3px 27px 3px 8px;
+			position: relative;
+			
+			i {
+				color: #8a8a8a;
+				border: 1px solid #c1c1c1;
+				padding: 1px 5px 3px 5px;
+				position: absolute;
+				right: 3px;
+				margin-top: 2px;
+				border-radius: 50px;
+				line-height: 14px;
+				cursor:pointer;
+			}
+		}
+}	
+	
+	
+
+	
+
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
