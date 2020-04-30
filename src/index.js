@@ -5,10 +5,17 @@
 //import React from 'react';
 //import ReactDOM from 'react-dom';
 
-
+import Tokenizer from "./Tokenizer/Tokenizer.jsx";
 
 //import './css/bootstrap.css';
 
+//alert("test")
+
+//import './webfonts/glyphicons-halflings-regular.woff2';
+
+export {Tokenizer} 
+
+//ReactDOM.render( <MyBody />, document.getElementById('app'));
 alert("test")
 
 //import './webfonts/glyphicons-halflings-regular.woff2';
