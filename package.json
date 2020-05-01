@@ -1,14 +1,32 @@
 {
-  "name": "helloworld",
-  "version": "1.0.0",
-  "description": "",
-  "main": "index.js",
-  "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1",
-    "build": "clear && webpack --env.production=false ",
-    "start": "clear && webpack --env.production=false --mode development &&   webpack-dev-server --hot --env.production=false",
-    "dist": "clear &&  webpack-dev-server --hot --env.production=false --env.mode=dist --display-error-details"
+  "_args": [
+    [
+      "github:darincardin/tokenizer#1.0.2",
+      "C:\\Users\\dcardin\\Documents\\workspace\\website"
+    ]
+  ],
+  "_development": true,
+  "_from": "github:darincardin/tokenizer#1.0.2",
+  "_id": "tokenizer@github:darincardin/tokenizer#a7f6f99166d0724e30a4f385fe9e5fa5097a21a9",
+  "_inBundle": false,
+  "_integrity": "",
+  "_location": "/tokenizer",
+  "_phantomChildren": {},
+  "_requested": {
+    "type": "git",
+    "raw": "github:darincardin/tokenizer#1.0.2",
+    "rawSpec": "github:darincardin/tokenizer#1.0.2",
+    "saveSpec": "github:darincardin/tokenizer#1.0.2",
+    "fetchSpec": null,
+    "gitCommittish": "1.0.2"
   },
+  "_requiredBy": [
+    "#DEV:/"
+  ],
+  "_resolved": "github:darincardin/tokenizer#a7f6f99166d0724e30a4f385fe9e5fa5097a21a9",
+  "_spec": "github:darincardin/tokenizer#1.0.2",
+  "_where": "C:\\Users\\dcardin\\Documents\\workspace\\website",
+  "author": "",
   "babel": {
     "plugins": [
       "@babel/plugin-proposal-class-properties",
@@ -20,8 +38,6 @@
       "@babel/env"
     ]
   },
-  "author": "",
-  "license": "ISC",
   "dependencies": {
     "@babel/cli": "^7.8.4",
     "@babel/core": "^7.8.4",
@@ -40,8 +56,10 @@
     "react-dom": "^16.8.4",
     "react-error-boundary": "^1.2.5",
     "react-lazyload": "^2.6.5",
-    "react-router-dom": "^5.1.2",
+    "react-redux": "^5.0.6",
     "react-router": "latest",
+    "react-router-dom": "^5.1.2",
+    "redux": "^3.7.2",
     "underscore": "latest",
     "webpack": "^4.42.1",
     "webpack-cli": "^3.3.11",
@@ -49,10 +67,9 @@
     "webpack-css-concat-plugin": "0.0.0",
     "webpack-dev-middleware": "^3.7.2",
     "webpack-log": "^2.0.0",
-    "redux": "^3.7.2",
-    "react-redux": "^5.0.6",
     "webpack-merge-and-include-globally": "^2.1.24"
   },
+  "description": "Tokenizer using ReactJS and Webpack",
   "devDependencies": {
     "babel-plugin-react-html-attrs": "^2.1.0",
     "babel-plugin-wildcard": "^6.0.0",
@@ -72,5 +89,15 @@
     "scss": "^0.2.4",
     "style-loader": "^1.1.3",
     "url-loader": "^4.1.0"
-  }
+  },
+  "license": "ISC",
+  "main": "index.js",
+  "name": "tokenizer",
+  "scripts": {
+    "build": "clear && webpack --env.production=false ",
+    "dist": "clear &&  webpack-dev-server --hot --env.production=false --env.mode=dist --display-error-details",
+    "start": "clear && webpack --env.production=false --mode development &&   webpack-dev-server --hot --env.production=false",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "version": "1.0.0"
 }
