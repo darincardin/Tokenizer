@@ -11,7 +11,6 @@ class Tokenizer extends React.Component{
 			this.setState({value: e.currentTarget.value})
 		}
 	
-	
 		onEnter = e=>{
 			if(e.key=="Enter") this.onAdd()
 		}
@@ -43,24 +42,22 @@ class Tokenizer extends React.Component{
 				<div className="tokenizer" >
 					
 					<div>
-						<input placeholder="Tags" className='form-control' type="text" value={this.state.value} onChange={this.onChange} onKeyDown={this.onEnter} />
+						<input placeholder="Tags..." className='form-control' type="text" value={this.state.value} onChange={this.onChange} onKeyDown={this.onEnter} />
 						<button type="text" className={"btn btn-primary " + this.state.className} onMouseDown={this.onAdd} >
 							<span>Add</span>
 							<i className="glyphicon glyphicon-ban-circle"></i>
 						</button>
 					</div>
 					{ 
-						this.props.tokens.map(i=><span className="token"  >{i}  
-							<i onClick={()=>this.onDelete(i)} >x</i> 
+						this.props.tokens.map(i=>
+						<span key={i} className="token" >
+							{i}  <i onClick={()=>this.onDelete(i)} >x</i> 
 						</span>)
 					}	
-					
 				</div>
 			)
 		}   
-	
 }
-
 
 
 export default Tokenizer;

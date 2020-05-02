@@ -5,40 +5,30 @@ var webpack = require('webpack');
 
 
 module.exports = (env) => {
-
+	
+	var plugins = [ 
+		new webpack.ProvidePlugin({   $: "jquery", jQuery: "jquery"}) ,
+	];
+	
 
 	return  {
-	  resolve: {
-		extensions: ['*','.js','.jsx']
-	  },
-	  entry: {
-		index: './src/index.js'
-	  },
+	  resolve: {extensions: ['*','.js','.jsx']  },
+	  entry: {	index: './src/index.js'  },
 	  output: {
 		path: path.resolve(__dirname, 'dist'), filename: '[name].js'
 	  },
+	  plugins:plugins,
 	  devServer: {
 		contentBase:  require('path').join(__dirname, "src"),
 		publicPath: '/',
-		historyApiFallback: '/',
+		historyApiFallback: true,
 		inline: true,
-		port: 7777   ,
+		port: 8888,
 	  },
 	  module: {
 		rules: [
 			{ test: /\.jsx?$/, exclude: /node_modules/, loader: 'babel-loader' },
-            { test:/\.(s*)css$/, use:['style-loader','css-loader', 'sass-loader']  },			
-			{
-			    test: /\.(png|jpe?g|gif)$/i, 
-				exclude: /node_modules/, 
-				use: [{  loader: 'file-loader',  options: {  name: '[name].[ext]'}} ]
-			},
-			{
-				test: /\.woff($|\?)|\.woff2($|\?)|\.ttf($|\?)|\.eot($|\?)|\.svg($|\?)/,
-				loader: 'url-loader'
-			},
-
-		  
+	    	{ test:/\.(s*)css$/, use:['style-loader','css-loader', 'sass-loader']  },	
 		]
 	  }
 	}

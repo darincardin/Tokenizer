@@ -4,8 +4,77 @@
 
 
 
-.tokenizer {
 	
+.form-control {
+	font-family: Calibri;
+    display: block;
+    width: 100%;
+    xxheight: 34px;
+    padding: 6px 12px;
+    font-size: 14px;
+    line-height: 1.42857143;
+    color: #555555;
+    background-color: #fff;
+    background-image: none;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    -webkit-box-shadow: inset 0 1px 1px rgba(0, 0, 0, 0.075);
+    box-shadow: inset 0 1px 1px rgba(0, 0, 0, 0.075);
+    -webkit-transition: border-color ease-in-out .15s, box-shadow ease-in-out .15s;
+    -o-transition: border-color ease-in-out .15s, box-shadow ease-in-out .15s;
+    -webkit-transition: border-color ease-in-out .15s, -webkit-box-shadow ease-in-out .15s;
+    transition: border-color ease-in-out .15s, -webkit-box-shadow ease-in-out .15s;
+    transition: border-color ease-in-out .15s, box-shadow ease-in-out .15s;
+    transition: border-color ease-in-out .15s, box-shadow ease-in-out .15s, -webkit-box-shadow ease-in-out .15s;
+}
+	
+.btn {
+    display: inline-block;
+    margin-bottom: 0;
+    font-weight: normal;
+    text-align: center;
+    white-space: nowrap;
+    vertical-align: middle;
+    -ms-touch-action: manipulation;
+    touch-action: manipulation;
+    cursor: pointer;
+    background-image: none;
+    border: 1px solid transparent;
+    padding: 6px 12px;
+    font-size: 14px;
+    line-height: 1.42857143;
+    border-radius: 4px;
+    -webkit-user-select: none;
+    -moz-user-select: none;
+    -ms-user-select: none;
+    user-select: none;
+}
+	
+.btn-primary {
+    color: #fff;
+    background-color: #337ab7;
+    border-color: #2e6da4;
+	colot:white!important;
+}
+	
+.btn:hover, .btn:focus, .btn.focus {
+    color: #333;
+    text-decoration: none;
+}	
+	
+.btn-primary:hover {
+    color: #fff;
+    background-color: #286090;
+    border-color: #204d74;
+}	
+	
+	
+	
+	
+	
+	
+.tokenizer {
+		font-family: Calibri;
 		input {
 			width :200px;
 			display:inline-block;	
@@ -14,57 +83,42 @@
 		button {
 		    height: 33px;
 			width: 50px;
+			
 
-			i {	display:none; }
-			
-			
-			.invalid:active {
-				background: red!important;
-				
-				span { display:none; }
-				
-				i { display:block; }		
-			}
+		}
+		
+		button.invalid:active {
+			background-color: red!important;
+			xxspan { display:none; }
+			xxi { display:block; }		
 		}
 		
 		.token{
-			   box-shadow: 2px 2px 4px #717171;
-
+			box-shadow: 2px 2px 4px #717171;
 			color: #444444;
 			display: inline-block;
 			background: #e6e6e6;
 			border: solid #bdbdbd 1px;
 			border-radius: 8px;
 			margin: 3px 2px;
-			padding: 3px 27px 3px 8px;
+			padding: 3px 30px 3px 8px;
 			position: relative;
+			line-height: 24px;
 			
 			i {
+				background: #eaeaea;
 				color: #8a8a8a;
-				border: 1px solid #c1c1c1;
-				padding: 1px 5px 3px 5px;
+				border: 1px solid #aba8a8;
+				padding: 1px 6px 4px 6px;
 				position: absolute;
 				right: 3px;
 				margin-top: 2px;
 				border-radius: 50px;
-				line-height: 14px;
-				cursor:pointer;
+				line-height: 13px;
+				cursor: pointer;
 			}
 		}
 }	
-	
-	
-
-	
-
-	
-	
-	
-	
-	
-	
-	
-	
 	
 	
 	

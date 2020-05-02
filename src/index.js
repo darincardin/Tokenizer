@@ -1,25 +1,43 @@
+
+
+//
+
 //require('file-loader?name=[name].[ext]!./index.html');
 
 //import 'bootstrap';
 
-//import React from 'react';
-//import ReactDOM from 'react-dom';
+import React from 'react';
+import ReactDOM from 'react-dom';
 
 import Tokenizer from "./Tokenizer/Tokenizer.jsx";
 
-//import './css/bootstrap.css';
-
-//alert("test")
-
-//import './webfonts/glyphicons-halflings-regular.woff2';
-
-export {Tokenizer} 
-
-//ReactDOM.render( <MyBody />, document.getElementById('app'));
-alert("test")
-
-//import './webfonts/glyphicons-halflings-regular.woff2';
 
 
 
-//ReactDOM.render( <MyBody />, document.getElementById('app'));
+//import '../node_modules/bootstrap/dist/css/bootstrap.css';
+  
+
+
+
+class Main extends React.Component {
+	
+	
+	state = {tokens: [] }
+	
+	change = (name,value)=>{
+		this.setState({tokens:value})
+	}
+	
+	render = ()=>{
+		return <Tokenizer name="tokens" tokens={this.state.tokens} onChange={this.change}  />
+	}
+}
+
+	
+
+
+
+ReactDOM.render( <Main />, document.getElementById('app'));
+
+
+
