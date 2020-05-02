@@ -28,18 +28,16 @@
   "_where": "C:\\Users\\dcardin\\Documents\\workspace\\website",
   "author": "",
   "dependencies": {
+    "react": "^16.8.4",
+    "react-dom": "^16.1.1"
+  },
+  "description": "Tokenizer using ReactJS and Webpack",
+  "devDependencies": {
     "@babel/cli": "^7.8.4",
     "@babel/core": "^7.8.4",
     "@babel/preset-react": "^7.8.3",
     "@babel/preset-env": "^7.9.6",
-    "react": "^16.8.4",
-    "react-dom": "^16.1.1",
-    "bootstrap": "3.4.1",
-    "jquery": "3.4.1",
-    "babel-plugin-react-html-attrs": "^2.1.0"
-  },
-  "description": "Tokenizer using ReactJS and Webpack",
-  "devDependencies": {
+    "babel-plugin-react-html-attrs": "^2.1.0",
     "@babel/plugin-proposal-class-properties": "^7.8.3",
     "babel-loader": "^8.0.6",
     "css-loader": "^3.5.2",
@@ -54,9 +52,8 @@
   "main": "index.js",
   "name": "tokenizer",
   "scripts": {
-    "build": "clear && webpack --env.production=false --mode development",
-    "build2": "babel src -d dist",
-    "start": "clear && webpack --env.production=false --mode development &&   webpack-dev-server --hot --env.production=false",
+    "build": "clear && webpack --env.production=false --mode development --config webpack.prod.js",
+    "start": "clear && webpack --env.production=false --mode development --config webpack.config.js &&   webpack-dev-server --hot --env.production=false",
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "version": "1.0.0"

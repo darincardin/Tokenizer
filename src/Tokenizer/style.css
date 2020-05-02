@@ -54,13 +54,15 @@
     color: #fff;
     background-color: #337ab7;
     border-color: #2e6da4;
-	colot:white!important;
+
 }
 	
 .btn:hover, .btn:focus, .btn.focus {
-    color: #333;
+    color: #fff;
     text-decoration: none;
 }	
+	
+	
 	
 .btn-primary:hover {
     color: #fff;
@@ -68,23 +70,24 @@
     border-color: #204d74;
 }	
 	
+.btn-primary:active {
+	background-color: #083f6f;
+}		
 	
-	
-	/*
+
 	
 	
 .tokenizer {
 		font-family: Calibri;
 		input {
-			width :200px;
+			width: calc(100% - 90px);
 			display:inline-block;	
 		}
 
 		button {
 		    height: 33px;
 			width: 50px;
-			
-
+			margin: 0 0px;
 		}
 		
 		button.invalid:active {
@@ -123,10 +126,7 @@
 	
 	
 	
-	
-	*/
-	
-	
+		
 	
 	
 	

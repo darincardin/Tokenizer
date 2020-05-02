@@ -11,18 +11,12 @@ module.exports = (env) => {
 	return  {
 	  resolve: {extensions: ['*','.js','.jsx']  },
 	  entry: {	index: './src/index.js'  },
-
 	  output: {
 		path: path.resolve(__dirname, 'dist'), 
-		filename: '[name].js',
-	  },
-
-	  devServer: {
-		contentBase:  require('path').join(__dirname, "src"),
-		publicPath: '/',
-		historyApiFallback: true,
-		inline: true,
-		port: 8888,
+		filename: 'tokenizer.js',
+		library: ['tokenizer'],
+		libraryTarget: 'umd',
+		publicPath:'/dist/'
 	  },
 	  module: {
 		rules: [

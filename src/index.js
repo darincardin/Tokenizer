@@ -1,48 +1,16 @@
-import React from "react";
-import ReactDOM from 'react-dom';
+
 import Tokenizer from "./Tokenizer/Tokenizer.jsx";
-
-
 export default Tokenizer
 	   
 	
 
-
 /*
-export default {
-	tokenizer: {
-	   myTokenizer: {
-		  render: (args) => {
-			  ReactDOM.render(
-				  <Tokenizer />
-			  );
-		  }
-	   }
-	}
-}
-
-*/
-//
-/*
-//require('file-loader?name=[name].[ext]!./index.html');
-
-//import 'bootstrap';
 
 import React from 'react';
 import ReactDOM from 'react-dom';
-
 import Tokenizer from "./Tokenizer/Tokenizer.jsx";
 
-
-
-
-//import '../node_modules/bootstrap/dist/css/bootstrap.css';
-  
-
-
-
 class Main extends React.Component {
-	
 	
 	state = {tokens: [] }
 	
@@ -55,11 +23,7 @@ class Main extends React.Component {
 	}
 }
 
-	
-
-
 
 ReactDOM.render( <Main />, document.getElementById('app'));
-
 
 */
