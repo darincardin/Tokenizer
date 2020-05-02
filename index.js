@@ -1,7 +1,4 @@
 
-
-
-
-import Tokenizer from './dist/Tokenizer/Tokenizer.js';
+import Tokenizer from './dist/tokenizer.js';
 
 export {Tokenizer}

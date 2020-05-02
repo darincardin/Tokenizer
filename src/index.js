@@ -1,10 +1,11 @@
-
+import React from "react";
+import ReactDOM from 'react-dom';
 import Tokenizer from "./Tokenizer/Tokenizer.jsx";
 
 
-export default Tokenizer;
-
-
+export default Tokenizer
+	   
+	
 
 
 /*
