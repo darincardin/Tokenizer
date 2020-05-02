@@ -1,7 +1,28 @@
 
+import Tokenizer from "./Tokenizer/Tokenizer.jsx";
 
+
+export default Tokenizer;
+
+
+
+
+/*
+export default {
+	tokenizer: {
+	   myTokenizer: {
+		  render: (args) => {
+			  ReactDOM.render(
+				  <Tokenizer />
+			  );
+		  }
+	   }
+	}
+}
+
+*/
 //
-
+/*
 //require('file-loader?name=[name].[ext]!./index.html');
 
 //import 'bootstrap';
@@ -40,4 +61,4 @@ class Main extends React.Component {
 ReactDOM.render( <Main />, document.getElementById('app'));
 
 
-
+*/
