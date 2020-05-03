@@ -1,22 +1,17 @@
 const path = require('path');
 var webpack = require('webpack');
 
-
-
-
 module.exports = (env) => {
 	
-
-
 	return  {
 	  resolve: {extensions: ['*','.js','.jsx']  },
-	  entry: {	index: './src/index.js'  },
+	  entry: {	index: './src/index-prod.js'  },
 	  output: {
 		path: path.resolve(__dirname, 'dist'), 
-		filename: 'tokenizer.js',
+		filename: 'index.js',
 		library: ['tokenizer'],
 		libraryTarget: 'umd',
-		publicPath:'/dist/'
+		publicPath:'/dist'
 	  },
 	  module: {
 		rules: [

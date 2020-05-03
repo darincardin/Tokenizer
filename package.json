@@ -1,12 +1,12 @@
 {
   "_args": [
     [
-      "github:darincardin/tokenizer#1.0.5",
+      "github:darincardin/tokenizer#1.0.8",
       "C:\\Users\\dcardin\\Documents\\workspace\\website"
     ]
   ],
   "_development": true,
-  "_from": "github:darincardin/tokenizer#1.0.5",
+  "_from": "github:darincardin/tokenizer#1.0.8",
   "_id": "tokenizer@github:darincardin/tokenizer#a7f6f99166d0724e30a4f385fe9e5fa5097a21a9",
   "_inBundle": false,
   "_integrity": "",
@@ -14,32 +14,40 @@
   "_phantomChildren": {},
   "_requested": {
     "type": "git",
-    "raw": "github:darincardin/tokenizer#1.0.5",
-    "rawSpec": "github:darincardin/tokenizer#1.0.5",
-    "saveSpec": "github:darincardin/tokenizer#1.0.5",
+    "raw": "github:darincardin/tokenizer#1.0.8",
+    "rawSpec": "github:darincardin/tokenizer#1.0.8",
+    "saveSpec": "github:darincardin/tokenizer#1.0.8",
     "fetchSpec": null,
-    "gitCommittish": "1.0.5"
+    "gitCommittish": "1.0.8"
   },
   "_requiredBy": [
     "#DEV:/"
   ],
   "_resolved": "github:darincardin/tokenizer#a7f6f99166d0724e30a4f385fe9e5fa5097a21a9",
-  "_spec": "github:darincardin/tokenizer#1.0.5",
+  "_spec": "github:darincardin/tokenizer#1.0.8",
   "_where": "C:\\Users\\dcardin\\Documents\\workspace\\website",
   "author": "",
   "dependencies": {
     "react": "^16.8.4",
     "react-dom": "^16.1.1"
   },
+  "babel": {
+    "plugins": [
+      "@babel/plugin-proposal-class-properties"
+    ],
+    "presets": [
+      "@babel/preset-react"
+    ]
+  },
   "description": "Tokenizer using ReactJS and Webpack",
   "devDependencies": {
     "@babel/cli": "^7.8.4",
     "@babel/core": "^7.8.4",
-    "@babel/preset-react": "^7.8.3",
-    "@babel/preset-env": "^7.9.6",
-    "babel-plugin-react-html-attrs": "^2.1.0",
     "@babel/plugin-proposal-class-properties": "^7.8.3",
+    "@babel/preset-env": "^7.9.6",
+    "@babel/preset-react": "^7.8.3",
     "babel-loader": "^8.0.6",
+    "babel-plugin-react-html-attrs": "^2.1.0",
     "css-loader": "^3.5.2",
     "jsx-loader": "^0.13.2",
     "node-sass": "^4.13.1",
@@ -53,7 +61,7 @@
   "name": "tokenizer",
   "scripts": {
     "build": "clear && webpack --env.production=false --mode development --config webpack.prod.js",
-    "start": "clear && webpack --env.production=false --mode development --config webpack.config.js &&   webpack-dev-server --hot --env.production=false",
+    "start": "clear && webpack --env.production=false --mode development --config webpack.config.js &&  webpack-dev-server --hot --env.production=false",
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "version": "1.0.0"

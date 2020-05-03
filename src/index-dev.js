@@ -1,11 +1,4 @@
 
-import Tokenizer from "./Tokenizer/Tokenizer.jsx";
-export default Tokenizer
-	   
-	
-
-/*
-
 import React from 'react';
 import ReactDOM from 'react-dom';
 import Tokenizer from "./Tokenizer/Tokenizer.jsx";
@@ -26,4 +19,3 @@ class Main extends React.Component {
 
 ReactDOM.render( <Main />, document.getElementById('app'));
 
-*/

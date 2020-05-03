@@ -1,6 +1,5 @@
 import React from "react";
 
-
 import './style.css';
 
 class Tokenizer extends React.Component{
