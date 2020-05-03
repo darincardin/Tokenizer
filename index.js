@@ -1,4 +1,4 @@
 
-import Form from './dist';
+import Tokenizer from './dist';
 
-export {Form}
+export {Tokenizer}
