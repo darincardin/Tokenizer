@@ -1,18 +1,26 @@
-
 import React from 'react';
 import ReactDOM from 'react-dom';
-import Tokenizer from "./Tokenizer/Tokenizer.jsx";
+import Form from "./input/Form.jsx";
+
 
 class Main extends React.Component {
 	
-	state = {tokens: [] }
+	state = {object: {} }
 	
-	change = (name,value)=>{
-		this.setState({tokens:value})
+
+	onSuccess = ()=>{
+		debugger;
 	}
 	
 	render = ()=>{
-		return <Tokenizer name="tokens" tokens={this.state.tokens} onChange={this.change}  />
+		return (
+			<div>
+				<Form  onSuccess={this.onSuccess} object={this.state.order}>
+					<hr/>
+					<button type="submit" className="btn btn-primary">Submit</button> 	
+				</Form>
+			</div>
+		)
 	}
 }
 
