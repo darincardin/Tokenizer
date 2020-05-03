@@ -1,42 +1,29 @@
 	
 	
-	
-	
-	
-	
-    table  {
+	table  {
         width:100%;
-    }
-			
-	table tr {
-		height: 45px;
-	
-	}
-
-    table td{
-        padding-bottom: 10px;
-    }
-			
 		
-	table td:first-child{
-		    width: 200px;
-	}
+		
+		tr {
+			height: 45px;
+			
+			td {
+				padding-bottom: 10px;
+			}
+			
+			td:first-child{
+				width: 200px;
+			}
+		}
 
-	
-	
+    }
+			
+
 	.control-label {
 	    text-align: right;
         width: 100%;
         padding-top: 0px!important;
-
-        padding-right: 15px;
-	}
-	
-	.control-label{
 	    margin-bottom: 0px!important;
-	}
-	
-	.control-label{		
 		padding-top: 0!important;
 		padding-right: 40px;
 	}
@@ -48,7 +35,6 @@
         position: absolute;
         margin-left: 5px;
     }
-	
 	
 	
 
@@ -98,7 +84,7 @@
 		
 
 	
-	/**********   ERROR HANDLING ***********/
+
 
 	.glyphicon-ok, .glyphicon-remove{
 		display:none;
@@ -111,10 +97,8 @@
 	.has-error .glyphicon-remove{
 		display:block
 	}
-	
-	
-	
-    /**************  RESPONSIVE     ********************/  
+
+
     @media screen and  (max-width : 540px) {
 
 
@@ -132,13 +116,6 @@
 
 	
 	
-	
-	
-	
-	
-	
-	
-	
 	.popover{
 		font-weight: 700;
 		white-space:nowrap;
@@ -147,7 +124,7 @@
 		
 	
 	
-	
+
 	
 	
 	

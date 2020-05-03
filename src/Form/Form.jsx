@@ -1,16 +1,16 @@
 import React from 'react';
 
 
-import Text from './Text.jsx';
-import Number from './Number.jsx';
-import Phone from './Phone.jsx';
+import Text from './Inputs/Text.jsx';
+import Number from './Inputs/Number.jsx';
+import Phone from './Inputs/Phone.jsx';
 
 const newOrder = {id:"", fName:"", lName:"", quantity:"", phone:"", address:""}
 
 
 import 'bootstrap';
 import '../../node_modules/bootstrap/dist/css/bootstrap.css';
-import './style.css';
+import './style.scss';
 
 class Form extends React.Component {
 
@@ -39,32 +39,39 @@ class Form extends React.Component {
 		this.setState(state=>state.object[name] = value )
 	}
 	
+	
+	
+	
+	
 	render() {
+		
+		
+		var Input = function(attrs){
+
+			switch(attrs.tag){
+				case "Phone":  return <Phone  {...attrs} />
+				case "Number": return <Number  {...attrs} />
+				default:       return <Text  {...attrs} />
+			}					
+		}
+
 		
 		return (
 			<form onSubmit={this.onSubmit}>
+					
 				<table>
 					{this.state.object &&
 						<tbody>
-							{this.props.showID && 
-							<tr>
-									<td><label className="control-label label-id" >ID</label></td>
-									<td>{this.state.object.id}</td>
-							</tr>
-							}					
-							<tr>
-								<td><label className="control-label required">First Name</label></td>
-								<td><Text name="fName" required change={this.change} state={this.state}  /></td>
-							</tr>
-							<tr>
-								<td><label className="control-label required">Last Name</label></td>
-								<td><Text name="lName" required change={this.change} state={this.state}  /></td>
-							</tr>
-							<tr>
-								<td><label className="control-label required">Phone</label></td>
-								<td><Phone name="phone" required change={this.change} state={this.state} /></td>
-							</tr>				
-
+							{	
+								this.props.inputs.map( i =>(
+									<tr key={i.name}>
+										<td><label className="control-label required">{i.label}</label></td>
+										<td>
+											<Text name={i.name} required change={this.change} state={this.state}  />
+										</td>
+									</tr>		
+								))
+							}
 						</tbody>
 					}
 				</table>

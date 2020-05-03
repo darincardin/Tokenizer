@@ -1,5 +1,5 @@
 
-module.exports = function(elem, loaderContext)  {
+var Tooltip = function(elem, loaderContext)  {
 
          var input = $(elem).find('.form-control');
 
@@ -27,3 +27,4 @@ module.exports = function(elem, loaderContext)  {
          }
 };
 
+export default Tooltip

@@ -1,8 +1,17 @@
 import React from 'react';
-import tooltip from '../js/tooltip.js';
+import tooltip from './Tooltip.jsx';
 import ReactDOM from 'react-dom';
 
 const messages = {required:"Required", phone:"Format is xxx-xxx-xxxx"};
+
+
+
+
+
+
+
+
+
 
 class Text extends React.Component {
 
