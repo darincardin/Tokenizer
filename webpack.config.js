@@ -8,6 +8,10 @@ module.exports = (env) => {
 		new webpack.ProvidePlugin({   $: "jquery", jQuery: "jquery", _: 'underscore' }) ,
 	];
 	
+	
+	
+	
+	
 	return  {
 	  resolve: {extensions: ['*','.js','.jsx']  },
 	  entry: {	index: './src/index-dev.js'  },
