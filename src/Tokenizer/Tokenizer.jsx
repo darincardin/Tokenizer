@@ -1,4 +1,5 @@
 import React from "react";
+import PropTypes from 'prop-types';
 
 import './style.css';
 
@@ -58,6 +59,11 @@ class Tokenizer extends React.Component{
 		}   
 }
 
+Tokenizer.propTypes = {
+    name: PropTypes.string.isRequired,
+    tokens: PropTypes.array.isRequired,
+	onChange: PropTypes.func.isRequired
+};
 
 export default Tokenizer;
 	
