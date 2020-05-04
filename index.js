@@ -1,4 +1,4 @@
 
 import Tokenizer from './dist';
 
-export {Tokenizer}
+export default Tokenizer
