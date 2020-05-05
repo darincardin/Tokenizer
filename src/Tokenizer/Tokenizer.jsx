@@ -51,7 +51,7 @@ class Tokenizer extends React.Component{
 					{ 
 						this.props.tokens.map(i=>
 						<span key={i} className="token" >
-							{i}  <i onClick={()=>this.onDelete(i)} >x</i> 
+							{i}  <i className="close-btn" onClick={()=>this.onDelete(i)} >x</i> 
 						</span>)
 					}	
 				</div>

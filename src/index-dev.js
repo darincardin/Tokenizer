@@ -1,7 +1,10 @@
-
 import React from 'react';
 import ReactDOM from 'react-dom';
 import Tokenizer from "./Tokenizer/Tokenizer.jsx";
+
+import 'bootstrap/dist/css/bootstrap.css';
+
+
 
 class Main extends React.Component {
 	

@@ -29,7 +29,8 @@
   "author": "",
   "dependencies": {
     "react": "^16.8.4",
-    "react-dom": "^16.1.1"
+    "react-dom": "^16.1.1",
+    "bootstrap": "3.4.1"
   },
   "babel": {
     "plugins": [
@@ -49,6 +50,7 @@
     "babel-loader": "^8.0.6",
     "babel-plugin-react-html-attrs": "^2.1.0",
     "css-loader": "^3.5.2",
+    "file-loader": "^6.0.0",
     "jsx-loader": "^0.13.2",
     "node-sass": "^4.13.1",
     "sass-loader": "^8.0.2",
