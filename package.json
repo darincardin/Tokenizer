@@ -57,7 +57,7 @@
     "webpack-cli": "^3.3.11"
   },
   "license": "ISC",
-  "main": "index.js",
+  "main": "dist/index.js",
   "name": "tokenizer",
   "scripts": {
     "build": "clear && webpack --env.production=false --mode development --config webpack.prod.js",
