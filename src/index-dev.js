@@ -27,6 +27,7 @@ class Main extends React.Component {
 		return (	
 			<div>
 				<Tokenizer name="tokens" tokens={this.state.tokens} setState={this.onChange}  />
+				<br />
 				<button onClick={this.onSubmit}>Submit</button>
 			</div>
 		)
