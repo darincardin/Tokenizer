@@ -14,8 +14,23 @@ class Main extends React.Component {
 		this.setState({tokens:value})
 	}
 	
+	
+	onChange = obj =>{
+		this.setState(obj);
+	}
+	
+	onSubmit = ()=>{
+		alert(this.state.tokens);
+	}
+	
 	render = ()=>{
-		return <Tokenizer name="tokens" tokens={this.state.tokens} onChange={this.change}  />
+		return (	
+			<div>
+				<Tokenizer name="tokens" tokens={this.state.tokens} setState={this.onChange}  />
+				<button onClick={this.onSubmit}>Submit</button>
+			</div>
+		)
+		
 	}
 }
 

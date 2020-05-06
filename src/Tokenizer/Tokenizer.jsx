@@ -20,7 +20,8 @@ class Tokenizer extends React.Component{
 					
 			if(this.state.value && !has) {
 				
-				this.props.onChange(this.props.name, [...this.props.tokens, this.state.value])
+				this.props.setState({ [this.props.name]: [...this.props.tokens, this.state.value] })
+
 				this.setState({ value:"", className:"" })
 			}
 			else this.setState({className:'invalid'})
@@ -33,7 +34,7 @@ class Tokenizer extends React.Component{
 			var i = tokens.findIndex(i=>i==r);
 			tokens.splice(i,1);
 			
-			this.props.onChange(this.props.name, tokens);
+			this.props.setState({[this.props.name]:tokens})
 		}
 
 		render = () =>{
@@ -62,7 +63,7 @@ class Tokenizer extends React.Component{
 Tokenizer.propTypes = {
     name: PropTypes.string.isRequired,
     tokens: PropTypes.array.isRequired,
-	onChange: PropTypes.func.isRequired
+	setState: PropTypes.func.isRequired
 };
 
 export default Tokenizer;
