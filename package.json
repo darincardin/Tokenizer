@@ -1,35 +1,7 @@
 {
-  "_args": [
-    [
-      "github:darincardin/tokenizer#1.0.8",
-      "C:\\Users\\dcardin\\Documents\\workspace\\website"
-    ]
-  ],
-  "_development": true,
-  "_from": "github:darincardin/tokenizer#1.0.8",
-  "_id": "tokenizer@github:darincardin/tokenizer#a7f6f99166d0724e30a4f385fe9e5fa5097a21a9",
-  "_inBundle": false,
-  "_integrity": "",
-  "_location": "/tokenizer",
-  "_phantomChildren": {},
-  "_requested": {
-    "type": "git",
-    "raw": "github:darincardin/tokenizer#1.0.8",
-    "rawSpec": "github:darincardin/tokenizer#1.0.8",
-    "saveSpec": "github:darincardin/tokenizer#1.0.8",
-    "fetchSpec": null,
-    "gitCommittish": "1.0.8"
-  },
-  "_requiredBy": [
-    "#DEV:/"
-  ],
-  "_resolved": "github:darincardin/tokenizer#a7f6f99166d0724e30a4f385fe9e5fa5097a21a9",
-  "_spec": "github:darincardin/tokenizer#1.0.8",
-  "_where": "C:\\Users\\dcardin\\Documents\\workspace\\website",
   "author": "",
   "dependencies": {
-    "react": "^16.8.4",
-    "react-dom": "^16.1.1",
+    "jquery": "3.4.1",
     "bootstrap": "3.4.1"
   },
   "babel": {
@@ -42,6 +14,8 @@
   },
   "description": "Tokenizer using ReactJS and Webpack",
   "devDependencies": {
+    "react": "^16.8.4",
+    "react-dom": "^16.1.1",
     "@babel/cli": "^7.8.4",
     "@babel/core": "^7.8.4",
     "@babel/plugin-proposal-class-properties": "^7.8.3",
@@ -50,7 +24,7 @@
     "babel-loader": "^8.0.6",
     "babel-plugin-react-html-attrs": "^2.1.0",
     "css-loader": "^3.5.2",
-    "file-loader": "^6.0.0",
+    "file-loader": "^5.1.0",
     "jsx-loader": "^0.13.2",
     "node-sass": "^4.13.1",
     "sass-loader": "^8.0.2",
@@ -58,9 +32,13 @@
     "webpack": "^4.42.1",
     "webpack-cli": "^3.3.11"
   },
-  "license": "ISC",
+  "peerDependencies": {
+    "react": "^16.8.4",
+    "react-dom": "^16.1.1"
+  },
+  "license": "MIT",
   "main": "dist/index.js",
-  "name": "tokenizer",
+  "name": "form",
   "scripts": {
     "build": "clear && webpack --env.production=false --mode development --config webpack.prod.js",
     "start": "clear && webpack --env.production=false --mode development --config webpack.config.js &&  webpack-dev-server --hot --env.production=false",
