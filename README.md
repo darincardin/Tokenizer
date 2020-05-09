@@ -5,8 +5,9 @@ Tokenizer using ReactJS and Webpack
 This library provides a tokenizer widget for use with a form. 
 
 Library can be installed by adding this line to package.json dependancies:
+```js
 "tokenizer": "darincardin/tokenizer#1.1.4",
-
+```
 
 The widget can then be included in the project like this:
 
