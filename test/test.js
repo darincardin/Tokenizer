@@ -27,18 +27,17 @@ beforeEach(() => {
 	btn = wrapper.find('button');  
 	input = wrapper.find('input');
 	data = ['animal', 'dog', 'shaggy', 'wag']
+	
+	data.forEach( (val, i) =>{
+		input.simulate('change', value(val) ) 
+		btn.simulate('mousedown');
+	})
 });  
  
 
 describe('Tokenizer', () => {
 	
     test('create', () => {
-
-		data.forEach( (val, i) =>{
-			input.simulate('change', value(val) ) 
-			btn.simulate('mousedown');
-		})
-
 	    expect(wrapper.find('.token').length).toBe(4);
 			
 		wrapper.find('.token span').forEach( (v,i) => {	
@@ -48,12 +47,6 @@ describe('Tokenizer', () => {
    
    
     test('delete', () => {
-	
-		data.forEach( (val, i) =>{
-			input.simulate('change', value(val) ) 
-			btn.simulate('mousedown');
-		})
-	
 		wrapper.find('.close-btn').at(2).simulate('click');	
 		expect(wrapper.find('.token').length ).toBe(3);			
 		expect(wrapper.find('.token span').at(0).text() ).toBe('animal');
@@ -64,24 +57,17 @@ describe('Tokenizer', () => {
 		expect(wrapper.find('.token').length ).toBe(2);			
 		expect(wrapper.find('.token span').at(0).text()).toBe('dog');
 		expect(wrapper.find('.token span').at(1).text()).toBe('wag');
-		
     });
-   
    
     
     test('duplicate', () => {
 		input.simulate('change', value("animal") ) 
 		btn.simulate('mousedown');
 
-		input.simulate('change', value("animal") ) 
-		btn.simulate('mousedown');
-
 		input.simulate('change', value("dog") ) 
 		btn.simulate('mousedown');
 
-		expect(wrapper.find('.token').length ).toBe(2);			
-		expect(wrapper.find('.token span').at(0).text()).toBe('animal');
-		expect(wrapper.find('.token span').at(1).text()).toBe('dog');
+		expect(wrapper.find('.token').length ).toBe(4);			
     });
  
 

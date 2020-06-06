@@ -17,8 +17,8 @@
   },
   "jest": {
     "moduleNameMapper": {
-      "\\.(jpg|jpeg|png|gif|eot|otf|webp|svg|ttf|woff|woff2|mp4|webm|wav|mp3|m4a|aac|oga)$": "<rootDir>/__mocks__/fileMock.js",
-      "\\.(css|less)$": "<rootDir>/__mocks__/styleMock.js"
+      "\\.(jpg|jpeg|png|gif|eot|otf|webp|svg|ttf|woff|woff2|mp4|webm|wav|mp3|m4a|aac|oga)$": "<rootDir>/test/__mocks__/fileMock.js",
+      "\\.(css|less)$": "<rootDir>/test/__mocks__/styleMock.js"
     }
   },
   "babel": {
@@ -65,9 +65,9 @@
   "main": "dist/index.js",
   "name": "tokenizer",
   "scripts": {
-    "build": "clear && webpack --env.production=false --mode development --config webpack.prod.js",
+    "build": "clear && jest ./test/test.js  && webpack --env.production=false --mode development --config webpack.prod.js",
     "start": "clear && webpack --env.production=false --mode development --config webpack.config.js &&  webpack-dev-server --hot --env.production=false",
-    "test": "jest ./test/test.js"
+    "test": "clear && jest ./test/test.js"
   },
   "version": "1.0.0"
 }
