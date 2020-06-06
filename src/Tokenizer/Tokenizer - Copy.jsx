@@ -8,7 +8,7 @@ class Tokenizer extends React.Component{
 		state = { value:"", className: "" }
 	
 		onChange = e =>{
-			this.setState({value: e.currentTarget.value, className:""})
+			this.setState({value: e.currentTarget.value})
 		}
 	
 		onEnter = e=>{	
@@ -31,12 +31,14 @@ class Tokenizer extends React.Component{
 		}
 		
 		focus = ()=>{
-			if(this.nameInput) setTimeout(()=>this.nameInput.focus(), 1);
+			setTimeout(()=>{
+				this.nameInput.focus();
+			}, 1);
 		}		
 	
 		onDelete = r =>{	
 			var tokens = this.props.tokens;
-
+		
 			var i = tokens.findIndex(i=>i==r);
 			tokens.splice(i,1);
 			
@@ -44,9 +46,10 @@ class Tokenizer extends React.Component{
 		}
 
 		render = () =>{
-
+			
 			return (
 				<div className="tokenizer" >
+					
 					<div>
 						<input 
 						ref={ input => { this.nameInput = input}}	
@@ -56,17 +59,16 @@ class Tokenizer extends React.Component{
 						value={this.state.value} 
 						onChange={this.onChange} 
 						onKeyDown={this.onEnter} />
-						
+
 						<button type="text" className={"btn btn-primary " + this.state.className} onMouseDown={this.onAdd} >
 							<span>Add</span>
 							<i className="glyphicon glyphicon-ban-circle"></i>
 						</button>
 					</div>
 					{ 
-						this.props.tokens.map((v,i)=>
+						this.props.tokens.map(i=>
 						<span key={i} className="token" >
-							<span>{v}</span>
-							<i className="close-btn glyphicon glyphicon-remove" onClick={()=>this.onDelete(v)}></i> 
+							{i}  <i className="close-btn" onClick={()=>this.onDelete(i)} >x</i> 
 						</span>)
 					}	
 				</div>
@@ -90,8 +92,3 @@ Tokenizer.defaultProps = {
 
 export default Tokenizer;
 	
-	
-	/*
-	
-
-	*/
