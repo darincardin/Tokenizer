@@ -11,6 +11,8 @@ Library can be installed by adding this line to package.json dependancies:
 "tokenizer": "darincardin/tokenizer",
 ```
 
+
+
 The widget can then be included in the project like this:
 
 ```jsx
