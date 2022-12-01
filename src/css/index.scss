@@ -10,21 +10,9 @@
 			display:inline-block;	
 		}
 
-		xxxbutton {
-
-			
-			i { display:none; }		
-			
-			&.invalid:active {
-				background-color: red!important;
-				span { display:none; }
-				i { display:block; }		
-			}		
-		}
-		
-
 		
 		.token{
+			position:vrelative;
 			box-shadow: 0px 0px 4px #ffffff00;
 			color: #ffffff;
 			display: inline-block;
@@ -42,19 +30,17 @@
 			&:hover {
 				background: #3b8dd5;
 				box-shadow: 0px 0px 4px #0089fffc;
-	
 			}
 			
 			i.close-btn {
-				color: white;
-				padding: 1px 6px 4px 6px;
-				position: absolute;
-				right: 0px;
-				xxtop: 3px;
-				border-radius: 50px;
-				
+			    font-family: monospace;
+			    font-weight: 900;
+			    color: white;
+			    position: absolute;
+			    right: 4px;
+			    line-height: inherit;
+			    border-radius: 50px;
 			}
-
 		}
 }	
 	

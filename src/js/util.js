@@ -36,7 +36,7 @@ var util =  {
 			
 			return `<span  class="token" >
 							<span>${v}</span>
-							<i class="close-btn glyphicon glyphicon-remove" ></i> 
+							<i class="close-btn glyphicon glyphicon-remove" >X</i> 
 					 </span>`;
 		}
 	}

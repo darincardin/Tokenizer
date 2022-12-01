@@ -86,7 +86,7 @@ var util = {
       return "<button type=\"text\" class=\"btn btn-primary\" >\n\t\t\t\t\t\t<span>Add</span><i className=\"glyphicon glyphicon-ban-circle\"></i>\n\t\t\t        </button>";
     },
     getToken: function getToken(v) {
-      return "<span  class=\"token\" >\n\t\t\t\t\t\t\t<span>".concat(v, "</span>\n\t\t\t\t\t\t\t<i class=\"close-btn glyphicon glyphicon-remove\" ></i> \n\t\t\t\t\t </span>");
+      return "<span  class=\"token\" >\n\t\t\t\t\t\t\t<span>".concat(v, "</span>\n\t\t\t\t\t\t\t<i class=\"close-btn glyphicon glyphicon-remove\" >X</i> \n\t\t\t\t\t </span>");
     }
   }
 };
