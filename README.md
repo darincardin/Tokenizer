@@ -1,28 +1,22 @@
-# tokenizer
-Tokenizer using ReactJS and Webpack
-
-
-
-
-This library provides a tokenizer widget for use in your project. 
+# stepbar
+Step Bar using React and Webpack.
+This library provides a stepbar widget for use with your project. 
 
 Library can be installed by adding this line to package.json dependancies:
 ```js
-"tokenizer": "darincardin/tokenizer",
+"stepbar": "darincardin/stepbar",
 ```
-  
 
 
-The widget can then be included in the project like this:
+
+
 
 ```jsx
-import Tokenizer from 'tokenizer'; 
+import Form from 'form'; 
 
-var state = {tokens: [] }
+state = { step: 0}
 	
-var onChange = obj =>{
-	this.setState(obj);
-}
-	
-<Tokenizer name="tokens" tokens={state.tokens} setState={onChange}  />
+array = [	{label:"A"}, {label:"B"}, {label:"C"},	{label:"D"}]
+
+<StepBar index={this.state.step} array={this.array}  />
 ```

@@ -1,0 +1,54 @@
+.tokenizer {
+    font-family: Calibri;
+    font-size: 15px;
+}
+
+.tokenizer input {
+    width: calc(100% - 90px);
+    display: inline-block;
+}
+
+.tokenizer xxxbutton i {
+    display: none;
+}
+
+.tokenizer xxxbutton.invalid:active {
+    background-color: red !important;
+}
+
+.tokenizer xxxbutton.invalid:active span {
+    display: none;
+}
+
+.tokenizer xxxbutton.invalid:active i {
+    display: block;
+}
+
+.tokenizer .token {
+    box-shadow: 0px 0px 4px rgba(255, 255, 255, 0);
+    color: #ffffff;
+    display: inline-block;
+    background: #337ab7;
+    border: solid #286090 1px;
+    border-radius: 4px;
+    margin: 4px 2px;
+    padding: 0px 30px 0px 8px;
+    position: relative;
+    line-height: 24px;
+    transition: all 0.5s;
+    cursor: pointer;
+}
+
+.tokenizer .token:hover {
+    background: #3b8dd5;
+    box-shadow: 0px 0px 4px rgba(0, 137, 255, 0.9882352941);
+}
+
+.tokenizer .token i.close-btn {
+    color: white;
+    padding: 1px 6px 4px 6px;
+    position: absolute;
+    right: 0px;
+    xxtop: 3px;
+    border-radius: 50px;
+}

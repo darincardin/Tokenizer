@@ -3,15 +3,17 @@ import React, {createRef} from 'react';
 import ReactDOM from 'react-dom';
 import Tokenizer from "./Tokenizer/Tokenizer.jsx";
 
-import 'bootstrap/dist/css/bootstrap.css';
+//import Tokenizer from "../dist/react";
+
+//import 'bootstrap/dist/css/bootstrap.css';
 
 
 
 class Main extends React.Component {
 	
-	state = {tokens: [] }
+	state = {tokens: ['vvv'] }
 	
-	change = (name,value)=>{		
+	change = (name, value)=>{		
 		this.setState({tokens:value})
 	}
 		
@@ -26,9 +28,9 @@ class Main extends React.Component {
 	render = ()=>{
 		return (	
 			<div>
-				<Tokenizer name="tokens" tokens={this.state.tokens} setState={this.onChange}  />
+				<Tokenizer name="tokens"  tokens={this.state.tokens} setState={this.onChange}  />
 				<br />
-				<button onClick={this.onSubmit}>Submit</button>
+				<button className="btn btn-info"  onClick={this.onSubmit}>Submit</button>
 			</div>
 		)
 		

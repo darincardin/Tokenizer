@@ -3,24 +3,36 @@ var webpack = require('webpack');
 
 
 
-
 module.exports = (env) => {
+
+	var entry     = {index: './src/index-dev.js'  };
+	var externals = {};
+	var output    =  {};
+
+	if(env.prod=='true'){
 	
+		entry     = { index: './src/index-prod.js'  };
+   	    externals = { '$': 'jquery', 'react': 'react', 'react-dom' : 'reactDOM','prop-types':'prop-types' }			
+		output    =  { libraryTarget: 'umd', publicPath: '/dist/react', path: path.resolve(__dirname, 'dist/react'), filename: '[name].js' };
+	}
 
 	return  {
+	  mode: 'development',
+	
 	  resolve: {extensions: ['*','.js','.jsx']  },
-	  entry: {	index: './src/index-dev.js'  },
-
-	  output: {
-		path: path.resolve(__dirname, 'dist'), 
-		filename: '[name].js',
-	  },
+	  entry: entry,
+	  externals: externals,
+	  output: output,
+      plugins:  [ new webpack.ProvidePlugin({ $: "jquery", 	jQuery: "jquery"})  ],
+  	 
 	  devServer: {
-		contentBase:  require('path').join(__dirname, "src"),
-		publicPath: '/',
+		//static:  require('path').join(__dirname, "src/"),
+		
+		static: {  directory: path.join(__dirname, 'src/') },
+
 		historyApiFallback: true,
-		inline: true,
-		port: 8888,
+
+		port: 3100,
 	  },
 	  module: {
 		rules: [
@@ -28,13 +40,8 @@ module.exports = (env) => {
 	    	{ test:/\.(s*)css$/, use:['style-loader','css-loader', 'sass-loader']  },	
 		    {
 				test: /\.(woff(2)?|ttf|eot|svg)(\?v=\d+\.\d+\.\d+)?$/,
-				use: {
-					loader: 'file-loader',
-					options: { name: '[name].[ext]',  outputPath: 'fonts/'} 
-				}
-		    }				
-			
-			
+				use: { loader: 'file-loader', options: { name: '[name].[ext]',  outputPath: 'fonts/'} }
+		    }		
 		]
 	  }
 	}
