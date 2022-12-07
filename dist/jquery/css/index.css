@@ -9,7 +9,7 @@
 }
 
 .tokenizer .token {
-    position: vrelative;
+    position: relative;
     box-shadow: 0px 0px 4px rgba(255, 255, 255, 0);
     color: #ffffff;
     display: inline-block;
@@ -20,13 +20,13 @@
     padding: 0px 30px 0px 8px;
     position: relative;
     line-height: 24px;
-    transition: all 0.5s;
+    transition: all 0.15s;
     cursor: pointer;
 }
 
 .tokenizer .token:hover {
-    background: #3b8dd5;
-    box-shadow: 0px 0px 4px rgba(0, 137, 255, 0.9882352941);
+    background: rgb(255, 0, 0);
+    box-shadow: 0px 0px 4px red;
 }
 
 .tokenizer .token i.close-btn {
