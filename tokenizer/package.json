@@ -1,0 +1,12 @@
+{
+  "name": "react-widget.tokenizer",
+  "version": "1.0.0",
+  "description": "A tokenizer widget.",
+  "main": "dist/index.js",
+  "scripts": {
+    "start": "webpack-dev-server --open", 
+    "build": "webpack --env prod=true --mode production"
+  },
+  "babel": {  "presets": ["@babel/preset-env", "@babel/preset-react"] }
+
+}

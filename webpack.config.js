@@ -13,7 +13,7 @@ module.exports = (env) => {
 	
 		entry     = { index: './src/index-prod.js'  };
    	    externals = { '$': 'jquery', 'react': 'react', 'react-dom' : 'reactDOM','prop-types':'prop-types' }			
-		output    =  { libraryTarget: 'umd', publicPath: '/dist/react', path: path.resolve(__dirname, 'dist/react'), filename: '[name].js' };
+		output    =  { libraryTarget: 'umd', publicPath: '/dist', path: path.resolve(__dirname, 'dist'), filename: '[name].js' };
 	}
 
 	return  {
@@ -26,12 +26,8 @@ module.exports = (env) => {
       plugins:  [ new webpack.ProvidePlugin({ $: "jquery", 	jQuery: "jquery"})  ],
   	 
 	  devServer: {
-		//static:  require('path').join(__dirname, "src/"),
-		
 		static: {  directory: path.join(__dirname, 'src/') },
-
 		historyApiFallback: true,
-
 		port: 3100,
 	  },
 	  module: {

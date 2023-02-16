@@ -1,33 +1,18 @@
 {
   "name": "react-webpack",
   "version": "1.0.0",
-  "description": "",
-  "main": "dist/react/index.js",
+  "description": "A collection of react widgets",
+  "keywords": ["react", "widget"],
+  "author": "Darin Cardin",
   "scripts": {
-  
-  
-    "start:react": "webpack-dev-server --open ",
-    "start:jquery": "gulp build && gulp serve",
-    
-    "build": "npm run build:jquery && npm run build:react",    
-    "build:jquery": "gulp build",   
-    "build:react": "webpack --env prod=true --mode production ",
-    
-    "copy": "xcopy C:\\Users\\darin\\Documents\\workspace\\tokenizer\\dist\\*.* C:\\Users\\darin\\Documents\\workspace\\website_preact\\node_modules\\tokenizer\\dist\\  /y /E",
-    "work": "npm run build_r && npm run copy",
-    
-    
-    "save": "git add . && git commit -m 'stepbar' && git push",
-
-    "watch": "gulp watch",
-    "test": "./node_modules/karma/bin/karma start --single-run",
-
-    "clean": "gulp clean",
-    "lint": "gulp lint"
+      "start:form":      "cd form      && npm run start && cd ..",
+      "start:stepbar":   "cd stepbar   && npm run start && cd ..",
+      "start:tokenizer": "cd tokenizer && npm run start && cd ..",
+      "build": "npm run build:form && npm run build:stepbar && npm run build:tokenizer",
+      "build:form":      "cd form      && npm run build && cd ..",
+      "build:stepbar":   "cd stepbar   && npm run build && cd ..",
+      "build:tokenizer": "cd tokenizer && npm run build && cd .."
   },
-  "keywords": [],
-  "author": "",
-  "license": "ISC",
   "devDependencies": {
     "@babel/core": "^7.8.3",
     "@babel/preset-env": "^7.8.3",
@@ -37,31 +22,11 @@
     "babel-plugin-lodash": "^3.3.4",
     "babel-preset-env": "^1.7.0",
     "babel-preset-react": "^6.24.1",
-    "bootstrap": "3.4.1",
     "browser-sync": "^2.26.7",
     "sass": "^1.55.0",
-     "sass-loader": "^10",
+    "sass-loader": "^10",
     "del": "^5.1.0",
-    "gulp": "^4.0.2",
-    "gulp-babel": "^8.0.0",
-    "gulp-clean-css": "^4.2.0",
-    "gulp-cssbeautify": "^2.0.1",
-    "gulp-jasmine": "^4.0.0",
-    "gulp-jshint": "^2.1.0",
-    "gulp-postcss": "^8.0.0",
-    "gulp-rename": "^2.0.0",
-    "gulp-sass": "^5.1.0",
-    "gulp-uglify": "^3.0.2",
     "html-webpack-plugin": "^4.0.4",
-    "jasmine-core": "^3.5.0",
-    "jasmine-jquery": "^2.1.1",
-    "jshint": "^2.11.0",
-    "karma": "^4.4.1",
-    "karma-chrome-launcher": "^3.1.0",
-    "karma-firefox-launcher": "^1.3.0",
-    "karma-jasmine": "^3.1.0",
-    "karma-jasmine-jquery": "^0.1.1",
-    "karma-spec-reporter": "0.0.32",
     "lodash-webpack-plugin": "^0.11.6",
 
     "uglify-save-license": "^0.4.1",
@@ -71,10 +36,8 @@
     "webpack-css-concat-plugin": "0.0.0",
     "webpack-dev-middleware": "^3.7.2",
     "webpack-log": "^2.0.0",
-    "webpack-merge-and-include-globally": "^2.1.24",
     "webpack-cli": "^4.9.2",
     "webpack-dev-server": "^4.9.0"
-
   },
   "dependencies": {
     "@babel/core": "^7.9.0",
@@ -84,13 +47,11 @@
     "babelify": "^10.0.0",
     "browserify": "^17.0.0",
     "clean-webpack-plugin": "^4.0.0",
-
+    "bootstrap": "3.4.1",
+     "jquery": ">=1.9.0",
     "css-loader": "^3.4.2",
     "expose-loader": "^0.7.5",
     "file-loader": "^6.2.0",
-    "gulp-concat": "^2.6.1",
-    "gulp-file-include": "^2.3.0",
-    "jquery": ">=1.9.0",
     "lodash": "^4.17.21",
     "react": "^16.13.1",
     "react-cookie": "^4.1.1",

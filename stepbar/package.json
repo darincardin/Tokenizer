@@ -1,0 +1,12 @@
+{
+  "name": "react-widget.stepbar",
+  "version": "1.0.0",
+  "description": "A stepbar widget.",
+  "main": "dist/index.js",
+  "scripts": {
+    "start": "webpack-dev-server --open", 
+    "build": "webpack --env prod=true --mode production "
+  },
+  "babel": {  "presets": ["@babel/preset-env", "@babel/preset-react"] }
+
+}
