@@ -1,51 +1,84 @@
-# form
-Simple form using React and Webpack
-This library provides a form widget for use with your project. 
 
-Library can be installed by adding this line to package.json dependancies:
-```js
-"form": "darincardin/form",
-```
+# Form React Widget
 
-
-
-Widget currently supports these input types:
- * Text
- * Phone
- * Number
- * Select
- * RadioButton
- * Checkbox
- * Select
- * TextArea
- 
-The widget can then be included in the project like this:
-
-
-```jsx
-import Form from 'form'; 
-
-var state = { object: {} }	
-	
-var inputs = [ 
-	{label:"Order Info", name:"orderInfo", tag:"header" },
-	{label:"First Name", name:"fName",     tag:"text", required:true },
-	{label:"Info",    	 name:"info", 	   tag:"textarea" },
-	{label:"Quantity",   name:"quantity",  tag:"number",  showIf: {target: ['address'], test:v =>v>5 }},
-	{label:"Address",    name:"address", tag:"text", required:true },
-]	
-
-var onSuccess = (result)=>{
-	console.log(result);
-}
-
-<Form  onSuccess={this.onSuccess} object={this.state.order}   fields={this.inputs}>
-  <button type="submit" className="btn btn-primary">Submit</button> 
-</Form>
-```
+##### Summary
+This plugin provides a mechanical styled counter. Digits change in a animated, rolling fashion.
 
 Features:
 * Client side validation after a submit
 * Bad inputs display an error message on focus
 * Phone includes optional formatting
 * Inputs can be shown/hidden based on another input value
+
+##### Requirements
+
+  + [React](https://reactjs.org/)
+  + [Bootstrap](https://getbootstrap.com/)
+  
+-----
+##### Installation 
+
+```bash
+npm install darincardin/form
+```
+
+##### Commands
+
+```bash
+# serve with hot reload at localhost:3001
+npm run start
+
+# build for production with minification
+npm run build
+```
+
+##### Import Plugin
+
+```javascript
+import 'form';
+```
+
+
+##### Initialize Plugin
+
+```javascript
+const fields =  [ 
+	{label:"Customer Info", name:"customerInfo", tag:"header" },
+	{label:"Name", name:"name",     tag:"text", required:true },
+	{label:"Phone",      name:"phone", tag:"phone", format:true}		
+```
+
+```javascript
+<Form object={this.state.object} onSuccess={this.onSuccess} fields={this.state.fields}>
+	<button type="submit" >Submit</button> 
+</Form>
+```
+
+-----
+##### Configuration
+
+The configuration plugin offers the following configurations
+
+
+
+* object: the object that contains the form data
+* onSuccess: a function called if the form is submitted successfully
+* fields: the inputs to display to the user. Should correspond to the object passed in
+
+
+##### Fields
+The fields are passed in as an array of objects. Each object must have the 'tag' attribute. 
+This attribute tells the form what type of input should be used
+
+Widget currently supports these input types:
+ * text
+ * phone
+ * number
+ * select
+ * radio
+ * checkbox
+ * select
+ * textarea
+
+
+

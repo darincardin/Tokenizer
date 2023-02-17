@@ -15,7 +15,7 @@ const fields =  [
 		{label:"Phone",      name:"phone", tag:"phone", format:true},			
 
 		{label:"Order Info",  tag:"header", name: "orderInfo"  },
-		{label:"Quantity",   name:"quantity",  tag:"number", required:true,  showIf: {target: ['deliver'], test:v =>v>5 }},
+		{label:"Quantity",   name:"quantity",  tag:"number", required:true},
 		{label:"Time",       name:"time",    tag:"select"  , options: [  
 			{id:"1", label:"10:30 AM"},
 			{id:"2", label:"11:00 AM"},

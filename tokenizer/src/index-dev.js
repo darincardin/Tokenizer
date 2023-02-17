@@ -11,12 +11,8 @@ import Tokenizer from "./Tokenizer/Tokenizer.jsx";
 
 class Main extends React.Component {
 	
-	state = {tokens: ['vvv'] }
-	
-	change = (name, value)=>{		
-		this.setState({tokens:value})
-	}
-		
+	state = {tokens: ['aaa'] }
+			
 	onChange = obj =>{
 		this.setState(obj);
 	}
@@ -28,7 +24,11 @@ class Main extends React.Component {
 	render = ()=>{
 		return (	
 			<div>
-				<Tokenizer name="tokens"  tokens={this.state.tokens} setState={this.onChange}  />
+				<Tokenizer name="tokens"  tokens={this.state.tokens} setState={this.onChange}  >
+					<button type="text" >
+						Add
+			        </button>
+				</Tokenizer>
 				<br />
 				<button className="btn btn-info"  onClick={this.onSubmit}>Submit</button>
 			</div>

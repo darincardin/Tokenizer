@@ -34,18 +34,17 @@ class Tokenizer extends React.Component{
 				<div className="tokenizer" >
 					<div>
 						<input  ref={(elem) => { this.input = elem; }} className='form-control' type="text" value={this.state.value} onChange={this.onChange} onKeyDown={this.onKeyDown} />
-
-							<button type="text" class="btn btn-primary"  onClick={this.onAdd}>
-								<span>Add</span>
-			        		</button>
+						<span onClick={this.onAdd}>
+							{this.props.children}
+						</span>
 					</div>
 					{ 
 						this.props.tokens.map((v,i)=>
 							<span key={i} onClick={()=>this.onRemove(v)}  >
 							
-								<span  class="token" >
+								<span  className="token" >
 									<span>{v}</span>
-									<span class="close-btn" ></span> 
+									<span className="close-btn" ></span> 
 						    	</span>						
 							
 							</span>)
