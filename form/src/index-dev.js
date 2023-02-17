@@ -4,9 +4,9 @@ import ReactDOM from 'react-dom';
 import Form from "./Form/Form.jsx";
 
 import 'bootstrap/dist/css/bootstrap.css';
-import 'bootstrap/dist/js/bootstrap.js';
+import bootstrap from 'bootstrap/dist/js/bootstrap.js';
 
-const newOrder = { id:"1", name:"", name:"", address:'', phone:"", mayo:false, quantity:"", info:'', deliver: false, time:'1'}
+const newOrder = { id:"1", name:"",  address:'', phone:"", mayo:false, quantity:"", info:'', deliver: false, time:'1'}
 
 
 const fields =  [ 
@@ -29,14 +29,15 @@ class Main extends React.Component {
 		object: {...newOrder}, fields:[...fields] 		
 	}	
 
+	input = null;
+
 	onSuccess = (data, callback)=>{
-		
 		var a = "";
 		Object.keys(data).forEach((v,i) =>{
-			if(data[v] != undefined) a += `${v}: ${data[v]}\n`;
+			if(data[v]) a += `${v}: ${data[v]}\n`;
 		});
 		
-		alert(a)
+		alert("Success: " + a)
 	}
 	
 
@@ -45,8 +46,8 @@ class Main extends React.Component {
 		return (
 			<div className="container">
 				<div className="row">
-
-					<div className="col-xs-12">				
+					
+					<div className="col-xs-12">	
 						<div style={{"fontFamily": "sans-serif", background: 'white', 'maxWidth':'600px',borderRadius:'5px', padding: '10px', margin:'auto'}}>
 				
 							<Form object={this.state.object} onSuccess={this.onSuccess}   fields={this.state.fields}>

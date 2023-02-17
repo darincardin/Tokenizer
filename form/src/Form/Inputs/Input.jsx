@@ -18,7 +18,11 @@ class Input extends React.Component {
 	
 	componentDidMount() {
 	    this.ttip = tooltip(this.elem.current);
-		this.tooltipParams = { onKeyUp:this.onWatch, onFocus:this.onWatch	}
+		this.tooltipParams = { onKeyUp:this.onWatch, onFocus:this.onWatch, onBlur: this.onBlur	}
+	}
+	
+	onBlur = ()=>{
+		 this.ttip.hide();
 	}
 	
 	componentWillReceiveProps(props) {
@@ -31,20 +35,6 @@ class Input extends React.Component {
 		this.props.change(name, value, this.validate(value))
 	}
 
-	onBlur = e =>{
-
-		var value = e.target.value;
-
-		if(this.props.format){
-
-			var formatted = this.props.strategy.format(value);
-			
-			if(formatted != value )  {
-				e.target.value = formatted;
-				this.onChange(e);					
-			}
-		}	
-	}
 
 
 	onWatch = () =>{
@@ -62,7 +52,6 @@ class Input extends React.Component {
 			type: this.props.tag || "text",
 			name: this.props.name,
 			onChange: this.onChange,
-			onBlur: this.onBlur,
 			value: this.state.value
 		}	
 	
@@ -72,8 +61,6 @@ class Input extends React.Component {
 				<td>
 					<div ref={this.elem} className={className.join(" ")} name={`my-${this.props.name}`}  >							
 						{ this.props.strategy.html(attribs, this.tooltipParams, this.props.options) }
-						<span className="glyphicon glyphicon-ok form-control-feedback" ></span>
-						<span className="glyphicon glyphicon-remove form-control-feedback" ></span>
 					</div>						
 				</td>
 			</>

@@ -1,6 +1,28 @@
 	
 form {
 
+
+	.error-msg {
+		padding: 3px;
+	    background: rgb(255 255 255 / 30%);
+	    color: #f40000;
+	    line-height: 17px;
+	    position: absolute;
+
+	}
+
+	.has-error {
+		input {
+			border: solid #f40000 1px;
+			transition: all .3s;
+		
+			&:focus {
+				border: solid #f40000 1px;
+				box-shadow: 0px 0px 4px red;
+			}				
+		}
+	}
+
 	table  {
         width:100%;
 		

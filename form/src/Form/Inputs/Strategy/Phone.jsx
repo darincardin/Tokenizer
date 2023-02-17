@@ -18,6 +18,10 @@ var Phone =   {
 		return v;
 	},
 
+
+
+
+
 	validate: (required, value) =>{
 		if(required && !Validation.exists(value) )  return 'required';	
 
@@ -33,3 +37,20 @@ var Phone =   {
 
 export default Phone;
 
+/*
+	onBlur: e =>{
+
+		var value = e.target.value;
+
+		if(this.props.format){
+
+			var formatted = this.props.strategy.format(value);
+			
+			if(formatted != value )  {
+				e.target.value = formatted;
+				this.onChange(e);					
+			}
+		}	
+	},
+
+*/
