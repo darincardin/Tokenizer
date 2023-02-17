@@ -1,6 +1,6 @@
 {
-  "name": "react-widget.tokenizer",
-  "version": "1.0.0",
+  "name": "react-widgets.tokenizer",
+  "version": "3.0.0",
   "description": "A tokenizer widget.",
   "main": "dist/index.js",
   "scripts": {

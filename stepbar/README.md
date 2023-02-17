@@ -1,8 +1,8 @@
 # Stepbar React Widget
 
 ##### Summary
-This plugin provides a stepbar that shows a user the current task they are on in a series of tasks. When moving to a new
-task, the stepbar will animate and the new task will highlight. Stepbar will loop back to step one if no more steps exist.
+This widget shows the user the current task they are on in a series of tasks. When moving to a new
+task, the stepbar will animate and the new task will highlight. The stepbar will loop back to step one if no more steps exist.
 
 ##### Requirements
   + [React](https://reactjs.org/)
@@ -11,7 +11,7 @@ task, the stepbar will animate and the new task will highlight. Stepbar will loo
 ##### Installation 
 
 ```bash
-npm install darincardin/stepbar
+npm install darincardin/react-widgets
 ```
 
 ##### Commands
@@ -24,19 +24,18 @@ npm run start
 npm run build
 ```
 
-##### Import Plugin
+##### Import 
 
 ```javascript
-import 'stepbar';
+import 'react-widgets/stepbar';
 ```
 
 
 
-##### Configuration
+##### Attributes
 
 * index: this value specifies the step index. It should be within the state object
 * array: the list of steps. Should be an array of strings.
-
 
 #####  Example
 

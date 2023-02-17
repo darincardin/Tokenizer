@@ -1,7 +1,7 @@
 # Tokenizer React Widget
 
 ##### Summary
-This plugin provides a tokenizer widget. Tokens are entered in an input field; they then appear as tokens below the input.
+This widget provides a tokenizer. Tokens are entered in an input field; they then appear as tokens below the input.
 Tokens can be deleted by clicking on them.
 
 
@@ -13,7 +13,7 @@ Tokens can be deleted by clicking on them.
 
 
 ```bash
-npm install darincardin/react-widgets/tokenizer
+npm install darincardin/react-widgets
 ```
 
 ##### Commands
@@ -29,7 +29,7 @@ npm run build
 ##### Import Plugin
 
 ```javascript
-import 'tokenizer';
+import 'react-widgets/tokenizer';
 ```
 
 

@@ -1,6 +1,6 @@
 {
-  "name": "react-widget.stepbar",
-  "version": "1.0.0",
+  "name": "react-widgets.stepbar",
+  "version": "3.0.0",
   "description": "A stepbar widget.",
   "main": "dist/index.js",
   "scripts": {

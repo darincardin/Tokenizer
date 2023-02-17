@@ -1,6 +1,6 @@
 {
   "name": "react-widgets.form",
-  "version": "1.0.0",
+  "version": "3.0.0",
   "description": "This form is generated from an object, and includes client side validation.",
   "main": "dist/index.js",
   "scripts": {

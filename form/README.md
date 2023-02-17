@@ -2,7 +2,7 @@
 # Form React Widget
 
 ##### Summary
-This plugin provides a mechanical styled counter. Digits change in a animated, rolling fashion.
+This widget creates a form from an array of fields. The form is built with bootstrap and jquery.
 
 Features:
 * Client side validation after a submit
@@ -14,12 +14,14 @@ Features:
 
   + [React](https://reactjs.org/)
   + [Bootstrap](https://getbootstrap.com/)
+  + [jQuery](http://jquery.com/)
   
 -----
+
 ##### Installation 
 
 ```bash
-npm install darincardin/form
+npm install darincardin/react-widgets
 ```
 
 ##### Commands
@@ -35,7 +37,7 @@ npm run build
 ##### Import Plugin
 
 ```javascript
-import 'form';
+import 'react-widgets/form';
 ```
 
 
@@ -43,9 +45,9 @@ import 'form';
 
 ```javascript
 const fields =  [ 
-	{label:"Customer Info", name:"customerInfo", tag:"header" },
-	{label:"Name", name:"name",     tag:"text", required:true },
-	{label:"Phone",      name:"phone", tag:"phone", format:true}		
+	{label:"Info",  name:"header", tag:"header" },
+	{label:"Name",  name:"name",   tag:"text", required:true },
+	{label:"Phone", name:"phone",  tag:"phone", format:true}		
 ```
 
 ```javascript
@@ -55,30 +57,33 @@ const fields =  [
 ```
 
 -----
-##### Configuration
+##### Attributes
 
-The configuration plugin offers the following configurations
-
-
+The widget has the following attributes:
 
 * object: the object that contains the form data
-* onSuccess: a function called if the form is submitted successfully
+* onSuccess: a function called when the form is submitted successfully
 * fields: the inputs to display to the user. Should correspond to the object passed in
 
 
 ##### Fields
-The fields are passed in as an array of objects. Each object must have the 'tag' attribute. 
-This attribute tells the form what type of input should be used
+The fields are passed in as an array of objects. Each field has the following options: 
 
-Widget currently supports these input types:
- * text
- * phone
- * number
- * select
- * radio
- * checkbox
- * select
- * textarea
+* label: the name seen by the user. For visual purposed only
+* name: the name of the input. should match the object value
+* required: should the form force the user to enter a value for this input
+* tag: tells the form what type of input should be used
 
+
+
+Widget currently supports these tag types:
+ * text: a standard input field
+ * phone: a standard input field with phone validation
+ * number: a standard input field with number validation
+ * select: a select box
+ * radio: radio input
+ * checkbox: checkbox input
+ * textarea: a textarea input
+ * header : displays a line with the label in the middle.No input field
 
 
