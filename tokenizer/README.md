@@ -26,10 +26,10 @@ npm run start
 npm run build
 ```
 
-##### Import Plugin
+##### Import
 
 ```javascript
-import 'react-widgets/tokenizer';
+import {Tokenizer} from 'react-widgets';
 ```
 
 
@@ -45,13 +45,15 @@ import 'react-widgets/tokenizer';
 ```javascript
 
 
-state = {tokens: ['Orange','Blue','Red'] }
-	s
+
+
+var state = {tokens: ['Orange','Blue','Red'] }
+	
 		
-onChange = obj =>{
+var onChange = obj =>{
 		this.setState(obj);
 }
 
-<Tokenizer name="tokens"  tokens={this.state.tokens} setState={this.onChange}  />
-s
+<Tokenizer name="tokens"  tokens={state.tokens} setState={onChange}  />
+
 ```

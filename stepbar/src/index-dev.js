@@ -2,8 +2,7 @@ import React from 'react';
 import ReactDOM from 'react-dom';
 
 
-import StepBar from "./jsx/StepBar.jsx";
-
+import {StepBar} from "./StepBar/StepBar.jsx";
 
 class Main extends React.Component {
 	

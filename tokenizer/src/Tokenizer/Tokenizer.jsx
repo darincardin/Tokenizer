@@ -77,6 +77,6 @@ Tokenizer.defaultProps = { allowDupes:false}
 
 
 
-export default Tokenizer;
+export  {Tokenizer};
 	
 	

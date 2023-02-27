@@ -1,17 +1,21 @@
 {
   "name": "react-widgets",
   "version": "3.0.0",
+  "author": "Darin Cardin",
   "description": "A collection of react widgets",
   "keywords": ["react", "widget"],
-  "author": "Darin Cardin",
+
+
+  "main":"dist/index.js",
+  "babel":{ "presets": [ "@babel/preset-react", "@babel/preset-env" ] },
   "scripts": {
-      "start:form":      "cd form      && npm run start && cd ..",
-      "start:stepbar":   "cd stepbar   && npm run start && cd ..",
-      "start:tokenizer": "cd tokenizer && npm run start && cd ..",
-      "build": "npm run build:form && npm run build:stepbar && npm run build:tokenizer",
-      "build:form":      "cd form      && npm run build && cd ..",
-      "build:stepbar":   "cd stepbar   && npm run build && cd ..",
-      "build:tokenizer": "cd tokenizer && npm run build && cd .."
+
+      "build": 			 "webpack --env prod=true --mode production",
+      "start:stepbar":   "webpack-dev-server --open --config=webpack.config.stepbar.js",
+      "start:tokenizer": "webpack-dev-server --open --config=webpack.config.tokenizer.js",
+      "start:form": 	 "webpack-dev-server --open --config=webpack.config.form.js",
+
+      "move": "cd .. && xcopy /I /E /Y \"react-widgets/dist\" \"darincardin.site/node_modules/react-widgets/dist\" "
   },
   "devDependencies": {
     "@babel/core": "^7.8.3",

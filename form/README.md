@@ -34,24 +34,27 @@ npm run start
 npm run build
 ```
 
-##### Import Plugin
+##### Import 
 
 ```javascript
-import 'react-widgets/form';
+import {Form} from 'react-widgets';
 ```
 
 
 ##### Initialize Plugin
 
 ```javascript
-const fields =  [ 
+var fields =  [ 
 	{label:"Info",  name:"header", tag:"header" },
 	{label:"Name",  name:"name",   tag:"text", required:true },
 	{label:"Phone", name:"phone",  tag:"phone", format:true}		
 ```
+var onSuccess = ()=>{}
+
+var state = {name: "Darin Cardin", phone:"508-992-4433"}
 
 ```javascript
-<Form object={this.state.object} onSuccess={this.onSuccess} fields={this.state.fields}>
+<Form object={state} onSuccess={onSuccess} fields={fields}>
 	<button type="submit" >Submit</button> 
 </Form>
 ```

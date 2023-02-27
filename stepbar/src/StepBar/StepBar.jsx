@@ -34,5 +34,5 @@ class StepBar extends React.Component{
 
 StepBar.defaultProps = { array:[], index:1 };
 
-export default StepBar;
+export  {StepBar};
 

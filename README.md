@@ -18,3 +18,9 @@ This package contains three widgets build using react. They can be imported and 
 ```bash
 npm install darincardin/react-widgets
 ```
+
+##### Import Example
+
+```javascript
+import {StepBar} from 'react-widgets';
+```

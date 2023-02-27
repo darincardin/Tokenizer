@@ -1,11 +1,8 @@
 import React, {createRef} from 'react';
 
 import ReactDOM from 'react-dom';
-import Tokenizer from "./Tokenizer/Tokenizer.jsx";
+import {Tokenizer} from "./Tokenizer/Tokenizer.jsx";
 
-//import Tokenizer from "../dist/react";
-
-//import 'bootstrap/dist/css/bootstrap.css';
 
 
 

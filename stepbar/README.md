@@ -27,7 +27,7 @@ npm run build
 ##### Import 
 
 ```javascript
-import 'react-widgets/stepbar';
+import {StepBar} from 'react-widgets';
 ```
 
 
@@ -40,11 +40,11 @@ import 'react-widgets/stepbar';
 #####  Example
 
 ```javascript
-state = { step: 1 };
+var state = { step: 1 };
 	
-array = ["A", "B", "C"];
+var array = ["A", "B", "C"];
 	
-<StepBar index={this.state.step} array={this.array} />
+<StepBar index={state.step} array={array} />
 ```
 -----
 

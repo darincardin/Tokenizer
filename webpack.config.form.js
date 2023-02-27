@@ -6,16 +6,15 @@ var webpack = require('webpack');
 module.exports = (env) => {
 
 	return  {
-	  mode: 'production',
-	
+	  mode: 'development',	
 	  resolve: {extensions: ['*','.js','.jsx']  },
-	  entry: {index: './index-prod.js'  },
-	  externals: { '$': 'jquery', 'react': 'react', 'react-dom' : 'reactDOM','prop-types':'prop-types' },
-	  output: { libraryTarget: 'umd', publicPath: '/dist', path: path.resolve(__dirname, 'dist'), filename: '[name].js' },
+	  entry: {index: './form/src/index-dev.js'  },
+	  externals: {},
+	  output: {},
       plugins:  [ new webpack.ProvidePlugin({ $: "jquery", 	jQuery: "jquery"})  ],
   	 
 	  devServer: {
-		static: {  directory: path.join(__dirname, 'src/') },
+		static: {  directory: path.join(__dirname, 'form/src/') },
 		historyApiFallback: true,
 		port: 3100,
 	  },
