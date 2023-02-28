@@ -1,5 +1,5 @@
 import React from "react";
-import '../css/stepbar.scss';
+import './style.scss';
 
 class StepBar extends React.Component{
 	

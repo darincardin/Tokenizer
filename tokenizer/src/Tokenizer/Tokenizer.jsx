@@ -1,6 +1,6 @@
 import React from "react";
 
-import '../css/index.scss';
+import './style.scss';
 
 class Tokenizer extends React.Component{
 
