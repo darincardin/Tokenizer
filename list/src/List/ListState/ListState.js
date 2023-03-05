@@ -28,17 +28,18 @@ class ListState {
 		var height = 1;
 		
 		if(this.ref && this.ref.current) {
-			
-			var footerPx = 20
-			
-			height =  this.ref.current.parentElement.offsetHeight - footerPx;
+			height =  this.ref.current.parentElement.offsetHeight ;
 		}
 
 		return height;
 	}
 	
-	getPageSize = function getPageSize(){				
-		var value = Math.round((this.getHeight()/ROW_SIZE)) - 2;
+	getPageSize = function getPageSize(){	
+		
+		//remove header, search, and footer
+		var height = this.getHeight() - (ROW_SIZE*3);
+					
+		var value = Math.floor((height/ROW_SIZE));
 		return  value || 1;
 	}
 	
