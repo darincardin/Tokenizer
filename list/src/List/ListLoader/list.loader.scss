@@ -1,0 +1,27 @@
+	/*******  LOADER  ************/
+
+	.table-loader {
+		position: absolute;
+		top:41px; left:0;right:0;bottom:0;
+		background: rgba(227, 227, 227, 0.4);
+		z-index: 10;
+
+		&>div {
+		    width: 10px;
+		    height: 10px;
+		    position: absolute;
+		    bottom: 2px;
+		    left:4px;
+		    padding: 5px;		
+	
+		}	
+				
+	
+		
+	}	
+
+
+
+	
+
+	

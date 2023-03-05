@@ -17,6 +17,7 @@
   "scripts": {
     "build": "webpack --env prod=true --mode production",
     "start:stepbar": "webpack-dev-server --open --config=webpack.config.stepbar.js",
+    "start:list": "webpack-dev-server --open --config=webpack.config.list.js",
     "start:tokenizer": "webpack-dev-server --open --config=webpack.config.tokenizer.js",
     "start:form": "webpack-dev-server --open --config=webpack.config.form.js"
   },
@@ -68,5 +69,8 @@
     "webpack-dev-middleware": "^3.7.2",
     "webpack-dev-server": "^4.9.0",
     "webpack-log": "^2.0.0"
+  },
+  "dependencies": {
+    "bootstrap-icons": "^1.10.3"
   }
 }
