@@ -28,6 +28,10 @@ class List extends React.Component {
 		this.getOrders();
 	}
 	
+	componentWillUnmount = ()=>{
+		window.removeEventListener('resize', this.handleEvent);
+	}
+	
 	handleEvent = () => {	
 		if(this.cancel) clearTimeout(this.cancel);
 		

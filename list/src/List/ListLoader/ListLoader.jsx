@@ -11,8 +11,8 @@ class ListLoader extends React.Component {
 			{this.props.show && 
 				<div className="table-loader">
 				
-					<div class="spinner-border spinner-border-sm" role="status">
-					  <span class="sr-only"></span>
+					<div className="spinner-border spinner-border-sm" role="status">
+					  <span className="sr-only"></span>
 					</div>
 				</div>
 			}

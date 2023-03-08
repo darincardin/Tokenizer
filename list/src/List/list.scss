@@ -2,7 +2,7 @@
 
 .list {	
 	
-	padding-bottom: 19px;
+
 	white-space: nowrap;
 	table-layout:fixed;
     overflow: hidden;
@@ -16,7 +16,15 @@
 	border: solid #DDDDDD 1px;
 	
 
-    a { cursor:pointer; }
+    a { 
+		cursor:pointer; 
+    }
+	
+	tbody a, .foot a{
+		cursor:pointer; 
+	    text-decoration: underline; 
+	    color:blue; 	
+	}
 	
  	.disabled {
 		cursor:not-allowed;

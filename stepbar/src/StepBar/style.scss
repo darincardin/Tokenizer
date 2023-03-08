@@ -25,6 +25,8 @@
 
 .step-bar ul:before {
     content: "";
+    box-sizing: unset;
+    font-family: Serif;
     background: #bcbcbc;
     position: absolute;
     right: 0;
@@ -46,9 +48,10 @@
 }
 
 .step-bar ul li:before {
+	font-family: serif;
     width: 30px;
     height: 30px;
-    font-weight: 800;
+    font-weight: 500;
     content: counter(step);
     counter-increment: step;
     line-height: 30px;

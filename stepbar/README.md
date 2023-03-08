@@ -40,10 +40,12 @@ import {StepBar} from 'react-widgets';
 #####  Example
 
 ```javascript
-var state = { step: 1 };
+var state = { stepA: 1, stepB:1 };
 	
-var array = ["A", "B", "C"];
+var array1 = ["A", "B", "C"];
+var array2 = [{label:}]
 	
+<StepBar index={state.step} array={array} />
 <StepBar index={state.step} array={array} />
 ```
 -----

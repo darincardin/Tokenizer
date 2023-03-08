@@ -23,8 +23,11 @@ class Main extends React.Component {
 			{name:'Last Name', id:'lName'}
 	]
 	
-	hello =   ()=>alert('hello');
-	goodbye = ()=>alert('goodbye')
+	hello =   e=>{
+		alert('hello: ' + e.fName); 
+		return Promise.resolve();
+	} 
+
 			
 	
 			
@@ -56,9 +59,7 @@ class Main extends React.Component {
 
 		return (					
 				<List labels={this.columns} data={this.state.data} getData={this.getData}  >	
-					<a    onClick={this.hello}>Hello</a>
-					&nbsp;|&nbsp;
-					<a  onClick={this.goodbye}>Goodbye</a> 
+					<a  onClick={this.hello}>Hello</a>
 				</List>				
 		)	
 	}

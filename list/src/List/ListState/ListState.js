@@ -28,7 +28,8 @@ class ListState {
 		var height = 1;
 		
 		if(this.ref && this.ref.current) {
-			height =  this.ref.current.parentElement.offsetHeight ;
+			height = this.ref.current.parentElement.offsetHeight ;
+			height = height - (height % ROW_SIZE);	
 		}
 
 		return height;
